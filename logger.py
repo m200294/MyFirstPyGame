@@ -107,6 +107,8 @@ def log_state():
         **game_state,
     }
 
+    print(json.dumps(entry))
+
     # New log file on each run
     mode = "w" if not _state_log_initialized else "a"
     with open("game_state.jsonl", mode) as f:
